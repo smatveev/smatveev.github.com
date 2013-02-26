@@ -1,0 +1,33 @@
+{
+    "site":     "http://smatveev.com/",
+    "title":    "Сергей Матвеев. Блог.",
+    "author":   "Сергей Матвеев",
+
+    "mode": "markdown",
+
+    "local": {
+        "templates": {
+           "path": "source/templates/",
+           "post": "source/templates/index.mustache",
+           "section": "source/templates/section.mustache",
+           "archive": "source/templates/archive.mustache"
+        },
+        "editor": "open '%s'",
+        "posts": "source/posts/",
+        "section": "source/section/",
+        "drafts": "source/drafts/",
+        "source": "source",
+        "results": {
+           "path": "",
+           "posts": "post/",
+           "site": "post/",
+           "archive": "results/archive/",
+           "feed": "results/feed"
+        },
+        "port": 8080,
+        "index": "source/.index.db"
+    },
+    "s3": {
+        "bucket": "s3://addmeto.cc/"
+    }
+}
