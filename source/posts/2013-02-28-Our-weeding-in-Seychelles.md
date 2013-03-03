@@ -4,13 +4,13 @@ Date: 2013-02-26
 Slug: 2012-04-03
 ---
 
-![картинка дня](http://ydn.zenfs.com/blogs/1/mojito_logo.png)
+![картинка дня](http://img-fotki.yandex.ru/get/6407/84548385.18/0_a4f8b_848399e8_M)
 Это было наше первое самостоятельное путешествие с целью хорошо отдохнкть провести свадьбу! :)
 
-В приятных подробностях обязательно читать в http://yanoteg.blogspot.ru/ - блоге лучшей половны.
+В приятных подробностях обязательно читать в <a href="http://yanoteg.blogspot.ru/">блоге</a> лучшей половны.
 
-А вот ссылка на http://fotki.yandex.ru/users/smatv33v/album/189190/?p=1 - свадебную фотосессию.
+А я пока выложил <a href="http://fotki.yandex.ru/users/smatv33v/album/189190/?p=1">свадебную фотосессию</a>.
 
-и http://fotki.yandex.ru/users/smatv33v/album/184479/ - фотографии Сейшелл.
+и <a href="http://fotki.yandex.ru/users/smatv33v/album/184479/">фотографии Сейшелл</a>.
 
 Было бы очень круто вернутся туда через несколько лет.

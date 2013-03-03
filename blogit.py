@@ -1,5 +1,5 @@
-﻿#!/usr/bin/env python3
-# coding=utf-8
+#!/usr/bin/env python3
+# -*- coding: UTF-8 -*-
 import sys
 import os
 import json
@@ -9,6 +9,8 @@ import re, shutil, gzip, functools
 sys.path.insert(0, 'libs/')
 import markdown2 as markdown
 import pystache
+
+import codecs
 
 current_date = datetime.now().strftime('%Y-%m-%d')
 
@@ -222,7 +224,7 @@ class MarkDownEntry(Entry):
 
     def do_to(self, template, fpath):
         print(template)
-        res = pystache.render(open(template, 'r').read(),
+        res = pystache.render(codecs.open(template, "r", "utf-8").read(),
             {
                 'conf': config, 'title': self.title,
                 'cdate': self.cdate, 'fdate': self.fdate,

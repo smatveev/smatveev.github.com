@@ -2,42 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="win-1251">
-    <title>Sergey Matveev</title>
+	<title>{{ title }} | РЎРµСЂРіРµР№ РњР°С‚РІРµРµРІ Р±Р»РѕРі</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Р‘Р»РѕРі">
+    <meta name="author" content="РЎРµСЂРіРµР№ РњР°С‚РІРµРµРІ Sergey Matveev">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
   </head>
-
   <body>
     <div class="cont">
       <nav class="css3-gradient">
         <ul>
-          <li>блог</li>
-          <li>архив</li>
+          <li class="active">Р‘Р»РѕРі</li>
         </ul>
       </nav>
       <div class="shad"></div>
       <div id="trapezoid" class="rotate"></div>
       <article>
-          <h1>
-            Наша свадьба на Сейшеллах
-          </h1>
-          <img src="http://img-fotki.yandex.ru/get/6407/84548385.18/0_a4f8b_848399e8_M"/>
-          <p>
-            Это было наше первое самостоятельное путешествие.
-            И именно в этом месте состоялась наша свадьба!
-            В приятных подробностях обязательно читать в <a href="http://yanoteg.blogspot.ru/">блоге<a/> лучшей половны.
-          </p>
-          <p>
-            А вот ссылка на <a href="http://fotki.yandex.ru/users/smatv33v/album/189190/?p=1">свадебную фотосессию</a>.            
-          </p>
-          <p>
-            и <a href="http://fotki.yandex.ru/users/smatv33v/album/184479/">фотографии Сейшелл</a>.
-          </p>
-          <p>
-            Было бы очень круто вернутся туда через несколько лет.
-          </p>
+          <h1><a href="{{ permalink }}">{{ title }}</a></h1>
+          {{& content }}
 
           <!-- AddThis Button BEGIN -->
           <div class="addthis_toolbox addthis_default_style ">
@@ -45,14 +28,13 @@
           <a class="addthis_button_tweet"></a>
           <a class="addthis_button_pinterest_pinit"></a>
           <a class="addthis_counter addthis_pill_style"></a>
-          </div>
-          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512d2a0c56bbbb23"></script>
+          </div>     
           <!-- AddThis Button END -->
+
 
           <div id="hypercomments_widget"></div>
 <script type="text/javascript">
-var _hcp = _hcp || {};_hcp.widget_id = 5699;_hcp.widget = "Stream";
+var _hcp = _hcp || {};_hcp.widget_id = 5799;_hcp.widget = "Stream";
 (function() { 
 var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
 hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://widget.hypercomments.com/apps/js/hc.js";
@@ -60,22 +42,39 @@ var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hc
 })();
 </script>
 <a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by HyperComments</a>
+
+
       </article>
       <div id="trapezoid"></div>
 
       <footer>
         <div>
           <a id="logo" href="http://smatveev.com"><img src="me8.png" /></a>
-            Привет, меня зовут Сергей и это еще один блог на всякие околотехнические и околожитейские темы.
+            РџСЂРёРІРµС‚, РјРµРЅСЏ Р·РѕРІСѓС‚ РЎРµСЂРіРµР№ Рё СЌС‚Рѕ РµС‰Рµ РѕРґРёРЅ Р±Р»РѕРі РЅР° РІСЃСЏРєРёРµ РѕРєРѕР»РѕС‚РµС…РЅРёС‡РµСЃРєРёРµ Рё РѕРєРѕР»РѕР¶РёС‚РµР№СЃРєРёРµ С‚РµРјС‹.
         </div>
         <ul class="link-list">
-          <li>пишу в <a href="http://twitter.com/smatveev">twitter</a><span></span></li>
+          <li>РїРёС€Сѓ РІ <a href="http://twitter.com/smatveev">twitter</a><span></span></li>
           <li>english versiion resume in <a href="http://linkedin.com/in/sergeymatveev">linkedin.</a><span></span></li>
-          <li>резюме не расском языке <a href="http://matv33v.moikrug.ru/">моем круге</a><span></span></li>
-          <li>немного видео в <a href="http://youtube.com/user/matv33v">youtube</a><span></span></li>
+          <li>СЂРµР·СЋРјРµ РЅРµ СЂР°СЃСЃРєРѕРј СЏР·С‹РєРµ <a href="http://matv33v.moikrug.ru/">РјРѕРµРј РєСЂСѓРіРµ</a><span></span></li>
+          <li>РЅРµРјРЅРѕРіРѕ РІРёРґРµРѕ РІ <a href="http://youtube.com/user/matv33v">youtube</a><span></span></li>
         </ul>
-        <span><small><i>скопиовано правильно 2013</i></small></span>
+
+                <div style="float: left;">
+          <a href="http://www.w3.org/html/logo/">
+<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" width="261" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, and Semantics">
+</a>
+        </div>
+
+        <span><small><i>СЃРєРѕРїРёРѕРІР°РЅРѕ РїСЂР°РІРёР»СЊРЅРѕ 2013</i></small></span>
       </footer>
     </div>
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20392213 = new Ya.Metrika({id:20392213, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/20392213" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+<!-- AddThis Button BEGIN -->
+	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-512d2a0c56bbbb23"></script>
+<!-- AddThis Button END -->
+
   </body>
 </html>
