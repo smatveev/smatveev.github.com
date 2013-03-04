@@ -3,7 +3,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #363636;
 
@@ -66,6 +66,7 @@ nav>ul {
 	border-bottom: 5px solid #f2d938;
 
 	font-weight: 400;
+	font-size: 20px;
 
 	padding: 5px 35px;
 	color: #fff;
@@ -98,7 +99,7 @@ nav>ul>li:hover {
 
 .shad {
 	background: #fff;
-	margin: -18px 0 0 0;
+	margin: -20px 0 0 0;
 	height: 50px;
 	position: relative;
 	background: #fff; /* Old browsers */
@@ -114,8 +115,8 @@ nav>ul>li:hover {
 article {
 	background: #fff;
 	margin: 0 20px;
-	padding: 1px 10px;
-	display: inline-block;
+	padding: 1px 20px;
+	display: block;
 }
 
 article > h1 > a {
@@ -154,18 +155,23 @@ article img {
 footer {
 	background: #fff;
 	padding: 20px;
-	display: inline-block;
 }
 
 footer > div {
 	float: left;
-	width: 50%;
 }
 
 #logo {
 	float: left;
+	padding: 0 20px 20px 0;
 }
 
+footer > p {
+	display: inline-block;
+	width: 100%;
+	font-size: 85%;
+	text-align: center;
+}
 
 h1 {
 font-family: 'Play', sans-serif;
@@ -173,7 +179,7 @@ font-family: 'Play', sans-serif;
 	font-weight: 700;
 
 	position: relative;
-	margin-left: -25px;
+	margin-left: -35px;
 	padding: 5px 30px;
 	color: #fff;
 	text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
@@ -202,44 +208,6 @@ h1:before {
 	border-left: 15px solid transparent; 
 	border-top: 15px solid #0c3b04;
 }
-
-.link-list {
-		list-style: none outside none;
-		width: 50%;
-		float: right;
-		padding: 0;
-		margin: 0;
-		text-align: right;
-}
-
-.link-list li {
-	position: relative;
-}
-
-.link-list span {
-	background: -moz-linear-gradient(left center , #FFFFFF, #FFFFFF 5%, rgba(255, 255, 255, 0.25) 5%, rgba(255, 255, 255, 0)) repeat scroll 100% 0 / 200% 100% transparent;
-	bottom: 0;
-	height: 1px;
-	left: 0;
-	margin-bottom: 3px;
-	pointer-events: none;
-	position: absolute;
-	transition: background 0s linear 0s;
-	width: 100%;
-	color-stop(5%, #ffffff), color-stop(5%, rgba(255,255,255,0.25)), color-stop(100%, rgba(255,255,255,0));
-	background:-webkit-linear-gradient(left, #ffffff,#ffffff 5%,rgba(255,255,255,0.25) 5%,rgba(255,255,255,0));
-	background:-moz-linear-gradient(left, #ffffff,#ffffff 5%,rgba(255,255,255,0.25) 5%,rgba(255,255,255,0));
-	background:-o-linear-gradient(left, #ffffff,#ffffff 5%,rgba(255,255,255,0.25) 5%,rgba(255,255,255,0));
-	background:linear-gradient(left, #ffffff,#ffffff 5%,rgba(255,255,255,0.25) 5%,rgba(255,255,255,0));
-	background-position:100% 0;-webkit-background-size:200% 100%;-moz-background-size:200% 100%;-o-background-size:200% 100%;background-size:200% 100%;-webkit-transition:background 0s linear;-moz-transition:background 0s linear;-o-transition:background 0s linear;transition:background 0s linear
-}
-
-.link-list a:hover,.link-list a:focus{color:#e18728}.link-list a:hover>span,.link-list a:focus>span
-{background-position:-100% 0;-webkit-transition:background 0.4s;-moz-transition:background 0.4s;-o-transition:background 0.4s;transition:background 0.4s}
-
-
-.link-list .space{margin-bottom:10px}
-
 
 #trapezoid {
 	border-bottom: 20px solid #bbb;

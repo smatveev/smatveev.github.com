@@ -215,8 +215,8 @@ class MarkDownEntry(Entry):
             self.content = rest
         self.content = makeHtml(self.content)
         self.result = os.path.join(config['local']['results']['posts'],
-                                                 self.page, 'index.html')
-        self.permalink = config['site'] + config['local']['results']['site'] + self.page
+                                                 self.page[11:], 'index.html')
+        self.permalink = config['site'] + config['local']['results']['site'] + self.page[11:]
 
 
     def do(self, template):
@@ -224,7 +224,7 @@ class MarkDownEntry(Entry):
 
     def do_to(self, template, fpath):
         print(template)
-        res = pystache.render(codecs.open(template, "r", "utf-8").read(),
+        res = pystache.render(open(template, 'r').read(),
             {
                 'conf': config, 'title': self.title,
                 'cdate': self.cdate, 'fdate': self.fdate,
@@ -251,7 +251,7 @@ def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False)
         for item in os.listdir(config['local']['section']):
             entry = gen_section(page=item)
     # if not noindex:
-    #     regenCSS()
+         # regenCSS()
     #     archive()
     #     feed()
     # if andsync:
