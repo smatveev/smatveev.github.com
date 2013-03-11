@@ -236,6 +236,16 @@ class MarkDownEntry(Entry):
             fl.write(res)
 
 
+def regenCSS():
+    '''regen .less files to style.css'''
+    shutil.copy("style.css", "post/style.css")
+    cwd = os.getcwd()
+    # os.chdir(config['local']['templates']['path'] + 'bootstrap/less')
+    # os.system("lessc -x style.less | gzip -c -9 > " + \
+    #             cwd + '/' + config['local']['results']['path'] + 'style.css')
+    # os.chdir(cwd)            
+
+
 def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False):
     """regenerate index and all pages"""
     cache = Index(ro=True)
@@ -247,11 +257,11 @@ def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False)
             entry = gen_page(page=item, force=force, index=cache)
             if entry:
                 put_to_index(index=idx, entry=entry)
-    if sections:
-        for item in os.listdir(config['local']['section']):
-            entry = gen_section(page=item)
-    # if not noindex:
-         # regenCSS()
+    # if sections:
+    #     for item in os.listdir(config['local']['section']):
+    #         entry = gen_section(page=item)
+    if not noindex:
+         regenCSS()
     #     archive()
     #     feed()
     # if andsync:
@@ -259,3 +269,4 @@ def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False)
 
 
 regen()
+# regenCSS()
