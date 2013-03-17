@@ -45,7 +45,7 @@ nav:after {
 	width: 0; 
 	height: 0; 
 	border-right: 30px solid transparent; 
-	border-top: 30px solid #844304;
+	border-top: 30px solid #422202;
 }
 
 nav:before {
@@ -57,7 +57,7 @@ nav:before {
 	width: 0; 
 	height: 0; 
 	border-left: 30px solid transparent; 
-	border-top: 30px solid #844304;
+	border-top: 30px solid #422202;
 }
 
 nav>ul {
@@ -183,6 +183,9 @@ font-family: 'Play', sans-serif;
 	padding: 5px 30px;
 	color: #fff;
 	text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+
+	border-top: 3px solid #5AA45A;
+	border-bottom: 3px solid #5AA45A;
 	
 
 	background: #28CA0E; /* Old browsers */
@@ -191,7 +194,7 @@ font-family: 'Play', sans-serif;
 	background: -webkit-linear-gradient(top,  #1E9A0B 0%,#28CA0E 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top,  #1E9A0B 0%, #28CA0E 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #1E9A0B 0%,#28CA0E 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #1E9A0B 0%,#28CA0E 100%); /* W3C */
+	background: linear-gradient(to bottom,  #227F22  0%,#007200 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1E9A0B', endColorstr='#28CA0E',GradientType=0 ); /* IE6-8 */
 
 
@@ -199,7 +202,7 @@ font-family: 'Play', sans-serif;
 
 h1:before {
 	position: absolute; 
-	bottom: -15px; 
+	bottom: -18px; 
 	left: 0; 
 	content: ""; 
 	display: block; 
