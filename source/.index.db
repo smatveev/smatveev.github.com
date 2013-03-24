@@ -1,11 +1,11 @@
 {
- "2013-02-28-Our-wedding-in-Seychelles": {
-  "cdate": 1362430004.6804812, 
-  "title": "Наша свадьба на Сейшельских островах", 
-  "permalink": "http://smatveev.com/post/Our-wedding-in-Seychelles", 
-  "fdate": "2013-02-26"
- }, 
  "idx": [
   "2013-02-28-Our-wedding-in-Seychelles"
- ]
+ ], 
+ "2013-02-28-Our-wedding-in-Seychelles": {
+  "fdate": "2013-02-26", 
+  "permalink": "http://smatveev.com/post/Our-wedding-in-Seychelles", 
+  "title": "Наша свадьба на Сейшельских островах", 
+  "cdate": 1362430004.6804812
+ }
 }

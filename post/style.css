@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=Play:700&subset=cyrillic,latin);
 
+
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans',sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	color: #363636;
@@ -128,10 +129,10 @@ article > h1 > a:hover {
 	color: inherit;
 }
 
-article img {
+article > p > img {
 	float: left;
 	padding: 10px;
-	margin: 0 20px 20px 15px;
+	margin: 5px 25px 25px 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	border: 1px solid #ccc;
 }
@@ -174,7 +175,7 @@ footer > p {
 }
 
 h1 {
-font-family: 'Play', sans-serif;
+font-family: 'Play';
 	font-size: 28px;
 	font-weight: 700;
 
@@ -182,34 +183,36 @@ font-family: 'Play', sans-serif;
 	margin-left: -35px;
 	padding: 5px 30px;
 	color: #fff;
-	text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 
-	border-top: 3px solid #5AA45A;
-	border-bottom: 3px solid #5AA45A;
+	/*border-top: 3px solid #5AA45A;
+	border-bottom: 3px solid #5AA45A;*/
 	
 
-	background: #28CA0E; /* Old browsers */
-	background: -moz-linear-gradient(top,  #1E9A0B 0%, #28CA0E 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1E9A0B), color-stop(100%,#28CA0E)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #1E9A0B 0%,#28CA0E 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #1E9A0B 0%, #28CA0E 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #1E9A0B 0%,#28CA0E 100%); /* IE10+ */
+	background: #227F22; /* Old browsers */
+	background: -moz-linear-gradient(top,  #227F22 0%, #007200 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#227F22), color-stop(100%,#007200)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #227F22 0%,#007200 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #227F22 0%, #007200 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #227F22 0%,#007200 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #227F22  0%,#007200 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1E9A0B', endColorstr='#28CA0E',GradientType=0 ); /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#227F22', endColorstr='#007200',GradientType=0 ); /* IE6-8 */
 
-
+	border-top: 4px solid #5E985E;
+	border-right: 4px solid #5E985E;
+	border-bottom: 4px solid #5E985E;
 }
 
 h1:before {
 	position: absolute; 
-	bottom: -18px; 
+	bottom: -14px; 
 	left: 0; 
 	content: ""; 
 	display: block; 
 	width: 0; 
 	height: 0; 
-	border-left: 15px solid transparent; 
-	border-top: 15px solid #0c3b04;
+	border-left: 14px solid transparent; 
+	border-top: 10px solid #0c3b04;
 }
 
 #trapezoid {
