@@ -23,7 +23,7 @@ def source_deconstructor(filename):
     return filename
 
 def dest_constructor(filename):
-    return os.path.join('results', 'blog', source_deconstructor(filename), 'index.html')
+    return os.path.join('blog', source_deconstructor(filename), 'index.html')
 
 def get_source_list():
     sources = []
@@ -105,7 +105,7 @@ def main(args):
         write(sfrom)
     if last in updated:
         sys.stdout.write('>> Index page updated to ' + last + '\n')
-        shutil.copy2(dest_constructor(last), 'results/index.html')
+        shutil.copy2(dest_constructor(last), 'index.html')
     if (len(updated) > 1 and updated[0] != last) or 'archive' in args:
         archive(sources)
         sys.stdout.write('>> Archive updated\n')
