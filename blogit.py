@@ -132,6 +132,17 @@ def put_to_index(index, entry):
         index['idx'].append(page)
 
 
+def _perversed_sort(x,y):
+    x = extract_numbers(x)
+    y = extract_numbers(y)
+    return -1 if x > y else 1 if x < y else 0        
+
+
+def perversed(vd):
+    "Sort dictionary in my own way, aha"
+    return sorted(vd, key=functools.cmp_to_key(_perversed_sort))        
+
+
 class Index(dict):
     def __init__(self, filename=None, ro=False, *args, **kwds):
         self.filename = filename if filename else config['local']['index']
@@ -236,6 +247,29 @@ class MarkDownEntry(Entry):
             fl.write(res)
 
 
+class Archive:
+    def __init__(self, idx):
+        self.idx = idx
+        self.results = os.path.join(config['local']['results']['archive'], 'index.html')
+
+    def do(self, template):
+        items = []
+        for x in perversed(self.idx['idx']):
+            items.append({
+                'fname': self.idx[x]['permalink'],
+                'subtitle': self.idx[x]['title'],
+                })
+        res = pystache.render(open(template, 'r').read(),
+            {
+                'conf': config,
+                'title': 'Archive',
+                'items': items,
+                'permalink': config['site'] + '/archive'
+            })
+        with saveto(self.results) as fl:
+            fl.write(res)
+
+
 def regenCSS():
     '''regen .less files to style.css'''
     shutil.copy("style.css", "post/style.css")
@@ -243,7 +277,14 @@ def regenCSS():
     # os.chdir(config['local']['templates']['path'] + 'bootstrap/less')
     # os.system("lessc -x style.less | gzip -c -9 > " + \
     #             cwd + '/' + config['local']['results']['path'] + 'style.css')
-    # os.chdir(cwd)            
+    # os.chdir(cwd)  
+
+
+def archive():
+    '''regen /arhive page'''
+    f = Archive(Index(ro=True))
+    f.do(config['local']['templates']['archive'])
+    sys.stdout.write('Archive ' + f.results + ' saved\n')
 
 
 def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False):
@@ -262,7 +303,7 @@ def regen(wipe=False, force=False, noindex=False, andsync=False, sections=False)
     #         entry = gen_section(page=item)
     if not noindex:
          regenCSS()
-    #     archive()
+         archive()
     #     feed()
     # if andsync:
     #     sync()
