@@ -93,7 +93,7 @@ def archive(sources):
     for post in reversed(sources):
         sys.stdout.write('>> Archive current post: ' + post + '\n')
         p = load_post(post)
-        res.append('* [{title}](../{file}) ({date})'.format_map(p))
+        res.append('* [{title}](http://smatveev.com/blog/{file}) ({date})'.format_map(p))
     with open('source/posts/archive.md', 'w') as fl:
         sys.stdout.write('>> Writing archive: \n')
         fl.write('\n'.join(res))
