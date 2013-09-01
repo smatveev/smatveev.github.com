@@ -224,6 +224,14 @@ h1:before {
 	left: 6px;
 }
 
+.btn a {
+	color: #363636;
+}
+.btn a:hover {
+	color: #363636;
+	text-decoration: none;
+}
+
 .testtext {
 	   text-shadow: 1px 1px #999, 
                 2px 2px #999, 
