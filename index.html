@@ -15,6 +15,10 @@
     <!-- Custom styles for this template -->
     <link href="/static/css/style.css" rel="stylesheet">
 
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="/static/js/main.js"></script>
+  
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -24,16 +28,14 @@
 
   <body>
 
-    <section>
-      <div class="cont">
-        <div class="center">
+    <div class="container">
 
-          <nav>
-            <!-- <button class="btn btn-2 btn-2a">Button</button> -->
-            <a href="https://twitter.com/smatveev" class="twitter-follow-button" data-show-count="false">Follow @smatveev</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <span class="testtext">smatveev.com</span>
 
-          </nav>
+          <div class="navbar navbar-default">          
+            <button class="btn btn-pressed">Блог</button>
+            <button class="btn">Архив</button>
+          </div>
 
           <div id="trapezoid" class="rotate"></div>
 
@@ -72,11 +74,9 @@
             <p>&copy; Сергей Матвеев, 2013</p>
           </div>
 
-        </div><!--/.center -->
-      </div><!--/.cont -->
-    </section>
+    </div><!--/.container -->
 
-    <footer>x</footer> 
+    <footer></footer> 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

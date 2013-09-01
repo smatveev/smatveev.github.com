@@ -14,11 +14,9 @@ def source_constructor(filename):
 
 def source_deconstructor(filename):
     if filename.endswith('.md'):
-        sys.stdout.write('>> !!!!')
         filename = filename[:-3]
 
     if filename.startswith('source/posts/'):
-        sys.stdout.write('>> -------')
         filename = filename[len('source/posts/'):]
     return filename
 
@@ -44,7 +42,9 @@ def get_updated_list(sources = get_source_list()):
 
 def load_post(filename):
     date = source_deconstructor(filename)
-    if len(date) > len('0000-00-00'):
+    sys.stdout.write('>> date = ' + date + '\n')
+    subtitle = ""
+    if len(date) > len('0000-00-00') and not "archive" in date:
         year, month, day, subtitle = date.split('-', 3)
         date = year + '-' + month + '-' + day
     data = open(filename, 'r').read()
@@ -76,6 +76,7 @@ def template(filename):
 
 def write(src):
     dest = dest_constructor(src)
+    sys.stdout.write('>> Archive write dest: ' + dest + '\n')
     run = template(src)
 
     if not os.path.isdir(os.path.dirname(dest)):
@@ -88,13 +89,15 @@ def pages():
     write('pages/about.md')
 
 def archive(sources):
-    res = ['# Архив', '', '']
+    res = ['# Archive', '', '']
     for post in reversed(sources):
+        sys.stdout.write('>> Archive current post: ' + post + '\n')
         p = load_post(post)
         res.append('* [{title}](/{file}) ({date})'.format_map(p))
-    with open('pages/archive.md', 'w') as fl:
+    with open('source/posts/archive.md', 'w') as fl:
+        sys.stdout.write('>> Writing archive: \n')
         fl.write('\n'.join(res))
-    write('pages/archive.md')
+    write('source/posts/archive.md')
 
 def main(args):
     sources = get_source_list() 
